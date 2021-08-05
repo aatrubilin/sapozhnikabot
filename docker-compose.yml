@@ -1,0 +1,11 @@
+version: '3'
+
+services:
+  sapozhnikabot: &sapozhnikabot
+    build:
+      context: .
+      dockerfile: ./compose/Dockerfile
+    image: sapozhnikabot
+    env_file:
+      - ./.envs/.production
+    command: python main.py
