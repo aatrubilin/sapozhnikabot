@@ -53,7 +53,7 @@ def should_reply(update: Update, context: CallbackContext):
 
     # Clear old keys
     for key in bot.message_info.keys():
-        if ts_now - bot.message_info[key]["ts"] > TIMEOUT_SEC * 10:
+        if ts_now - bot.message_info[key]["ts"] > 60 * 60 * 24 * 7:
             del bot.message_info[key]
     return True
 
