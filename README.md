@@ -36,7 +36,7 @@ Setup envs
 ```dotenv
 BOT_TOKEN=bot123456:ABC-DEF1234ghIkl-zyx57W2v1u123ew11
 TIMEOUT_SEC=7200
-SWEARS_DATASET_PATH=swars_jsons/ru.json
+SWEARS_DATASET_PATH=swears_jsons/ru.json
 LOG_LEVEL=INFO
 ```
 
@@ -95,7 +95,7 @@ Set the environment variables
 ```bash
 export BOT_TOKEN=bot123456:ABC-DEF1234ghIkl-zyx57W2v1u123ew11
 export TIMEOUT_SEC=10
-export SWEARS_DATASET_PATH=swars_jsons/ru.json
+export SWEARS_DATASET_PATH=swears_jsons/ru.json
 export LOG_LEVEL=DEBUG
 ```
 
