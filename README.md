@@ -4,7 +4,7 @@
 
 # Sapozhnikabot
 
-Бот сапожника
+Бот сапожника - [@sapozhnikabot](https://t.me/sapozhnikabot)
 
 ## Getting Started
 
