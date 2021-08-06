@@ -58,11 +58,13 @@ def should_reply(update: Update, context: CallbackContext):
     return True
 
 
-def echo(update: Update, context: CallbackContext) -> None:
-    """Echo the user message."""
+def reply(update: Update, context: CallbackContext) -> None:
+    """Reply the user message."""
     txt = update.message.text
+    if not txt:
+        return
     force_run = False
-    if update.message.text.startswith("@sapozhnikabot "):
+    if txt.startswith("@sapozhnikabot "):
         txt = txt.replace("@sapozhnikabot ", "")
         force_run = True
 
@@ -92,8 +94,8 @@ if __name__ == "__main__":
     # Get the dispatcher to register handlers
     dispatcher = updater.dispatcher
 
-    # Echo the message on Telegram only for groups
-    dispatcher.add_handler(MessageHandler(Filters.chat_type.groups, echo))
+    # Reply the message on Telegram only for groups
+    dispatcher.add_handler(MessageHandler(Filters.chat_type.groups, reply))
 
     # Start the Bot
     updater.start_polling()
