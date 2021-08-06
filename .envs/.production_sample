@@ -2,4 +2,4 @@ BOT_TOKEN=
 TIMEOUT_SEC=7200
 SWEARS_DATASET_PATH=swears_jsons/ru.json
 LOG_LEVEL=INFO
-SQLITE_DB_PATH=db.sqlite
+SQLITE_DB_PATH=/data/db.sqlite

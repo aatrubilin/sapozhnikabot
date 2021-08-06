@@ -9,3 +9,6 @@ services:
     env_file:
       - ./.envs/.production
     command: python main.py
+    restart: always
+    volumes:
+      - .data:/data
