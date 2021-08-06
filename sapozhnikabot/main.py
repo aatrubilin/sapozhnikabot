@@ -41,7 +41,7 @@ REPLY_METHODS = [get_random_swear, rhymer.get_rhyme]
 
 
 def should_reply(update: Update, context: CustomCallbackContext):
-    if not utils.random_bool():
+    if not utils.random_bool() or not utils.random_bool():
         logging.debug("%s: random exit -> False", update.update_id)
         return False
 
