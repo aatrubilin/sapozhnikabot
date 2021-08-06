@@ -14,7 +14,8 @@ def get_dataset(filepath):
 
 
 def get_random_choice(dataset):
-    return random.choice(dataset)
+    if dataset:
+        return random.choice(dataset)
 
 
 def random_bool():
