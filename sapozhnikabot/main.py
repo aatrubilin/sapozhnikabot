@@ -40,8 +40,6 @@ def should_reply(update: Update, context: CustomCallbackContext):
         return False
 
     reply = context.db.get_reply_for_chat_id(update.message.chat.id)
-    print(reply)
-
     if reply.timeout < TIMEOUT_SEC:
         logging.debug("%s: timeout exit -> False", update.update_id)
         return False
@@ -52,7 +50,7 @@ def should_reply(update: Update, context: CustomCallbackContext):
     return True
 
 
-def reply(update: Update, context: CustomCallbackContext) -> None:
+def reply_handler(update: Update, context: CustomCallbackContext) -> None:
     """Reply the user message."""
     txt = update.message.text
     if not txt:
@@ -87,7 +85,7 @@ if __name__ == "__main__":
     dispatcher = updater.dispatcher
 
     # Reply the message on Telegram only for groups
-    dispatcher.add_handler(MessageHandler(Filters.chat_type.groups, reply))
+    dispatcher.add_handler(MessageHandler(Filters.chat_type.groups, reply_handler))
 
     # Start the Bot
     updater.start_polling()
