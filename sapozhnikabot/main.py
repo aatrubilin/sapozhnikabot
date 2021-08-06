@@ -40,6 +40,7 @@ def should_reply(update: Update, context: CustomCallbackContext):
         return False
 
     reply = context.db.get_reply_for_chat_id(update.message.chat.id)
+    logging.debug("Reply: %s", reply)
     if reply.timeout < TIMEOUT_SEC:
         logging.debug("%s: timeout exit -> False", update.update_id)
         return False
