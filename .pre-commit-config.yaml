@@ -20,10 +20,3 @@ repos:
     hooks:
       - id: isort
         args: ["--profile", "black", "--filter-files"]
-
-  - repo: https://gitlab.com/pycqa/flake8
-    rev: 3.9.2
-    hooks:
-      - id: flake8
-        args: ['--config=setup.cfg']
-        additional_dependencies: [flake8-isort]

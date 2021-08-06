@@ -131,3 +131,6 @@ dmypy.json
 # Project
 .idea
 .envs/.production
+*.sqlite3
+*.sqlite
+*.db
