@@ -1,5 +1,8 @@
 version: '3'
 
+volumes:
+  data: {}
+
 services:
   sapozhnikabot: &sapozhnikabot
     build:
@@ -11,4 +14,4 @@ services:
     command: python main.py
     restart: always
     volumes:
-      - .data:/data
+      - data:/data
