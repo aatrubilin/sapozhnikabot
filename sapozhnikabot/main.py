@@ -59,6 +59,8 @@ def should_reply(update: Update, context: CustomCallbackContext):
 
 def reply_handler(update: Update, context: CustomCallbackContext) -> None:
     """Reply the user message."""
+    if update.message is None:
+        return
     txt = update.message.text
     if not txt:
         return
